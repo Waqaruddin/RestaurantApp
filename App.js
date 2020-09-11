@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import RestaurantList from './src/Home';
 import Details from './src/Details';
+import Welcome from './src/Welcome'
 
 
 
@@ -14,7 +15,8 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName = "Welcome">
+        <Stack.Screen name = "Welcome" component={Welcome} />
         <Stack.Screen  options={{ headerTitle: 'Restaurant Search' }} name = "Restaurants" component = {RestaurantList}/>
         <Stack.Screen name = "Details" component = {Details} /> 
       </Stack.Navigator>

@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
 
     categoryName:{
         fontWeight:'bold',
-        fontSize:30
+        fontSize:20
     },
 
     ratingAndReview:{
