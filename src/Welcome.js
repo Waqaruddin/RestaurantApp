@@ -8,9 +8,12 @@ export default function Welcome({navigation}){
 
             <Text style ={styles.heading}> Welcome </Text>
             <Text style ={styles.description}> To My Restaurant App </Text>
-            <Button style ={styles.button} onPress ={() => navigation.navigate('Restaurants')} title = 'Enter Here'/>
-
+            <TouchableOpacity style ={styles.button} onPress ={() => navigation.navigate('Restaurants')}>
+                <Text style ={styles.buttonTextStyle}> Enter here</Text>
+            </TouchableOpacity>
         </View>
+
+        
     );
 }
 
@@ -40,16 +43,20 @@ const styles = StyleSheet.create({
     },
     button:{
         
-    marginTop:10,
-    paddingTop:15,
-    paddingBottom:15,
-    marginLeft:30,
-    marginRight:30,
-    backgroundColor:'#00BCD4',
-    borderRadius:10,
-    borderWidth: 1,
-    borderColor: '#fff'
+        backgroundColor: "#FF7F50",
+        padding: 10,
+        width: 150,
+        alignItems: 'center',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: "#000",
 
+
+    },
+
+    buttonTextStyle:{
+        fontWeight:'bold',
+        fontSize:15
 
     }
 
