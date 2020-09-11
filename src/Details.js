@@ -24,7 +24,7 @@ export default function Details({route}){
 
 
     return(
-        <View style ={{backgroundColor:'#ffe5e5'}}>
+        <View style ={styles.container}>
             
             <Text style ={styles.title}>{route.params.name}</Text>
                    <Image style ={styles.image}
@@ -39,6 +39,13 @@ export default function Details({route}){
 
 const styles = StyleSheet.create({
 
+  container:{
+    flex:1,
+    backgroundColor:'#ffe5e5',
+   
+
+  },
+
     image: {
         height: 140,
         justifyContent: 'center',
@@ -50,7 +57,9 @@ const styles = StyleSheet.create({
       title:{
           fontWeight:'bold',
           fontSize: 32,
-          textAlign:'center'
+          textAlign:'center',
+          marginVertical: 30,
+          fontStyle:'italic'
         },
 
       description:{

@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -16,9 +15,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName = "Welcome">
-        <Stack.Screen name = "Welcome" component={Welcome} />
-        <Stack.Screen  options={{ headerTitle: 'Restaurant Search' }} name = "Restaurants" component = {RestaurantList}/>
-        <Stack.Screen name = "Details" component = {Details} /> 
+        <Stack.Screen options={{ headerShown: false}} name = "Welcome" component={Welcome} />
+        <Stack.Screen   options={{ headerShown: false}} name = "Restaurants" component = {RestaurantList}/>
+        <Stack.Screen options={{ headerShown: false}} name = "Details" component = {Details} /> 
       </Stack.Navigator>
     </NavigationContainer>
 

@@ -8,7 +8,7 @@ export default function Welcome({navigation}){
 
             <Text style ={styles.heading}> Welcome </Text>
             <Text style ={styles.description}> To My Restaurant App </Text>
-            <Button onPress ={() => navigation.navigate('Restaurants')} title = 'Enter Here'/>
+            <Button style ={styles.button} onPress ={() => navigation.navigate('Restaurants')} title = 'Enter Here'/>
 
         </View>
     );
@@ -39,8 +39,16 @@ const styles = StyleSheet.create({
 
     },
     button:{
-        borderRadius: 20,
-        fontWeight:'bold'
+        
+    marginTop:10,
+    paddingTop:15,
+    paddingBottom:15,
+    marginLeft:30,
+    marginRight:30,
+    backgroundColor:'#00BCD4',
+    borderRadius:10,
+    borderWidth: 1,
+    borderColor: '#fff'
 
 
     }
