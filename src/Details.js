@@ -9,7 +9,8 @@ import {
   SafeAreaView,
   Image,
 } from 'react-native';
-import * as DATA from './getRestaurantsAPI.json';
+import * as DATA from './getRestaurantsAPI';
+
 import {useNavigation} from '@react-navigation/native';
 
 

@@ -1,13 +1,29 @@
 import React, {useState} from'react';
 import {View, Image, StyleSheet, SafeAreaView, Text, FlatList} from 'react-native'
-import * as DATA from './getRestaurantsAPI.json';
+import * as DATA from './getRestaurantsAPI';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { Searchbar } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import SearchableDropDown from 'react-native-searchable-dropdown';
+
 
 
 
 export default function RestaurantList({navigation}){
+
+    var resData = []
+    var [searchQuery, setSearchQuery] = React.useState("");
+    var [searchData, setSearchData] = useState([])
+    var onChangeSearch = query => {
+        setSearchQuery (query)
+        var temp = []
+        for (var i in resData){
+            var a = resData[i].name
+            if (a.includes(query))
+                temp.push(resData[i].detail)
+        }
+        setSearchData(temp)
+    }
 
     const renderItem = ({ item }) => (                               ///// where data comes from
         <Item
@@ -18,7 +34,7 @@ export default function RestaurantList({navigation}){
         />
       );
 
-      const [searchText, setSearchText] = useState('');
+    //   const [searchText, setSearchText] = useState('');
 
       const Item = ({ name, rating, review, imageUrl }) => {              /// for layout
           return(                    
@@ -45,11 +61,37 @@ export default function RestaurantList({navigation}){
    return(
         <SafeAreaView style = {{backgroundColor:'#E0FFFF'}}>
 
-            <Searchbar style ={styles.searchBar}
+            {/* <Searchbar style ={styles.searchBar}
             placeholder ="Search"
             // onChangeText ={(text) => setSearchText(text)}
             // value ={searchText}
-            />
+            /> */}
+            
+            
+            <SearchableDropDown
+            items = {searchData}
+            onTextChange={onChangeSearch}
+            placeholder ="Search"
+            onItemSelect={item => {
+                setSearchData([])
+                navigation.navigate("Details", {item:item})}}
+                
+                itemStyle={{
+                    padding: 10,
+                    marginTop: 2,
+                    borderColor: '#fff',
+                    borderWidth: 1,
+                    borderRadius: 5,
+                }}
+                itemTextStyle ={{color: "#A9A9A9", fontSize: 18}}
+                resetValue = {true}
+                textInputStyle={{
+                    padding: 12,
+                    borderWidth: 1,
+                    borderColor: '#ccc',
+                    borderRadius: 5,
+                  }}/>
+
         
             <ScrollView>
 

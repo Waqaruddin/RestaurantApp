@@ -1,0 +1,63 @@
+{
+  "httpcode": 200,
+  "httpmessage": "sucess",
+  "response": [
+    {
+      "category": "Fast Food",
+      "restaurantList": [
+        {
+            "key": "1",
+          "name": "Chick-fil-A",
+          "imageUrl": "https://thechickenwire.chick-fil-a.com/-/media/amazon-cloudfront/images/cfacom/stories-images/2020/contactless-ordering/header.ashx?h=960&w=1440&la=en&hash=4A2BE10BB3B9E5A12FADCA5443C13B42",
+          "rating": "2.6",
+          "review": "1116"
+        },
+        {
+          "key": "2",
+          "name": "McDonald's",
+          "imageUrl": "https://i1.wp.com/www.eatthis.com/wp-content/uploads/2018/12/the-golden-mcdonalds-arch.jpg?fit=1200%2C879&ssl=1",
+          "rating": "3.3",
+          "review": "560"
+        }
+      ]
+    },
+    {
+      "category": "Mexican Cuisine",
+      "restaurantList": [
+        {
+          "key": "3",
+          "name": "Chipotle",
+          "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/chipotle-secret-menu-social-1566929113.png",
+          "rating": "4.5",
+          "review": "450"
+        },
+        {
+          "key": "4",
+          "name": "Taco Bell",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI8ZNVQ7SHL9ccBOxOhutwyWicv8R4vUyv1g&usqp=CAU",
+          "rating": "4.5",
+          "review": "935"
+        }
+      ]
+    },
+    {
+      "category": "Sea Food",
+      "restaurantList": [
+        {
+          "key": "5",
+          "name": "Red Lobster",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b1/Redlobster_logocopia.png",
+          "rating": "4.5",
+          "review": "2000"
+        },
+        {
+          "key": "6",
+          "name": "P.F.Chang's",
+          "imageUrl": "https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/ba925666404a9cf100b711ee7f738a5f",
+          "rating": "4.5",
+          "review": "4500"
+        }
+      ]
+    }
+  ]
+}
